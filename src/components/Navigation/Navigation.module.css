@@ -1,0 +1,20 @@
+.navWrap {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  padding: 8px;
+  border-radius: 4px;
+
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  background: transparent;
+}
+
+.navLink:hover,
+.navLink:focus {
+  background-color: whitesmoke;
+}

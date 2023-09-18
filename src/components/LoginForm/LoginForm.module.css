@@ -1,0 +1,46 @@
+.loginForm {
+	width: 500px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	border: 2px solid rgb(26, 7, 133);
+	border-radius: 4px;
+}
+
+.loginLabel {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.loginInput {
+	width: 90%;
+	height: 30px;
+	padding: 5px;
+	font-size: 20px;
+	border-radius: 4px;
+	outline-color: rgb(26, 7, 133);
+	transition: box-shadow 250ms linear;
+}
+
+.loginInput:focus,
+.loginInput:hover {
+	box-shadow: 5px -5px 5px 0px rgb(50, 39, 161);
+}
+
+.btnLogin {
+	width: 200px;
+	padding: 5px;
+	color: #000;
+	font-size: 20px;
+	border-radius: 4px;
+	background-color: transparent;
+	cursor: pointer;
+	transition: background-color 250ms linear, box-shadow 250ms linear;
+}
+.btnLogin:hover {
+	background-color: rgba(43, 157, 100, 0.7);
+	box-shadow: 5px -5px 5px 0px rgba(8, 252, 0, 1);
+	border: none;
+}

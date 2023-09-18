@@ -1,0 +1,29 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+			to top,
+			rgba(44, 48, 47, 0.7),
+			rgba(44, 48, 47, 0.4)
+		),
+		url(../../images/IMG_20180621_131416.jpg);
+
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: calc(100vh - 44px);
+
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.text {
+	font-size: 18px;
+	font-weight: 600;
+	width: 600px;
+}
