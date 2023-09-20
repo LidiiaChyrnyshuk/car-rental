@@ -40,7 +40,7 @@ export const Modal = ({
             className={css.btnClose}
             onClick={handleModalClose}
           >
-            {MdClose}
+            {<MdClose size={24} />}
           </button>
           <img className={css.carImg} src={img} alt={make} />
           <div className={css.infoWrapper}>

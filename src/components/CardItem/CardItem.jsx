@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   addToFavoritePage,
   deleteFromFavoritePage,
-} from '../../redux/cars/favoriteSlice';
+} from '../../redux/favorite/favoriteSlice';
 
 // import PropTypes from 'prop-types';
 import { HiHeart } from 'react-icons/hi';

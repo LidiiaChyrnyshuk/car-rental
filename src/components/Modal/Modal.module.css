@@ -1,285 +1,213 @@
 .backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(18, 20, 23, 0.5);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(18, 20, 23, 0.5);
 }
 
 .modal {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: white;
-	border-radius: 24px;
-	padding: 15px;
-	max-width: 320px;
-	z-index: 200;
-	overflow-y: auto;
-	max-height: 80vh;
-
-	border-radius: 24px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	@media (min-width: 768px) {
-		padding: 30px;
-		max-width: 100%;
-		max-height: 600px;
-		overflow-y: scroll;
-		top: 40%;
-	}
-	@media (max-width: 1080px) {
-		top: 50%;
-		padding: 30px;
-		max-width: 100%;
-		height: 600px;
-		overflow-y: scroll;
-	}
-	@media (min-width: 1440px) {
-		top: 50%;
-		padding: 40px;
-		overflow-y: hidden;
-		max-width: 100%;
-		max-height: 100%;
-	}
+  position: relative;
+  background-color: white;
+  border-radius: 24px;
+  padding: 40px;
+  width: 541px;
+  height: 92vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btnClose {
-	position: absolute;
-	color: black;
-	top: -12px;
-	right: 0px;
-	background-color: transparent;
-	width: 10px;
-	height: 10px;
-	border: none;
-	cursor: pointer;
-	@media (min-width: 768px) {
-		top: -22px;
-		right: -12px;
-		width: 20px;
-		height: 20px;
-	}
-	@media (min-width: 1440px) {
-		top: -30px;
-		right: -20px;
-		width: 24px;
-		height: 24px;
-	}
+  position: absolute;
+  color: black;
+  top: 16px;
+  right: 16px;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
 }
 
-/* export const CloseIcon = styled(MdClose)`
-  display: block;
-  color: #121417;
-  width: 14px;
-  height: 14px;
-  @media (min-width: 768px) {
-    top: -22px;
-    right: -12px;
-    width: 20px;
-    height: 20px;
-  }
-  @media (min-width: 1440px) {
-    top: -30px;
-    right: -20px;
-    width: 24px;
-    height: 24px;
-  }
-`; */
 .contentWrepper {
-	position: relative;
-
-	background-color: white;
-	border-radius: 24px;
-
-	@media (min-width: 768px) {
-		width: 461px;
-	}
-	@media (min-width: 1440px) {
-		width: 461px;
-	}
+  width: 461px;
+  background-color: white;
+  border-radius: 24px;
 }
 
 .carImg {
-	display: block;
-	width: 100%;
-	max-width: 100%;
-	width: 461px;
-	height: 248px;
-	object-fit: cover;
-	border-radius: 14px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  width: 461px;
+  height: 248px;
+  object-fit: cover;
+  border-radius: 14px;
 }
 
 .infoWrapper {
-	width: 100%;
-	align-items: center;
+  width: 100%;
+  align-items: center;
 }
 
 .mainInfo {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 14px;
-	margin-bottom: 8px;
-	font-weight: 500;
-	line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .carInfo {
-	display: flex;
-	width: 100%;
-	gap: 5px;
+  display: flex;
+  width: 100%;
+  gap: 5px;
 }
 
 .carText {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: #121417;
-	font-size: 16px;
-	line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #121417;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .modelTextBlue {
-	color: #3470ff;
-	font-size: 16px;
+  color: #3470ff;
+  font-size: 16px;
 }
 
 .secondaryInfo {
-	display: flex;
-	width: 300px;
-	flex-wrap: wrap;
-	align-items: center;
-	color: rgba(18, 20, 23, 0.5);
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: rgba(18, 20, 23, 0.5);
 
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 18px;
-	gap: 3px;
-	margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  gap: 3px;
+  margin-bottom: 14px;
 }
 
 .secondaryCarText {
-	color: rgba(18, 20, 23, 0.5);
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 18px;
-	border-right: 1px solid rgba(18, 20, 23, 0.2);
-	padding-right: 3px;
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  border-right: 1px solid rgba(18, 20, 23, 0.2);
+  padding-right: 3px;
 }
 
 .description {
-	color: #121417;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
+  color: #121417;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .accessories {
-	display: flex;
-	flex-direction: column;
-	margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
 }
 
 .accessoriesTitle {
-	color: #121417;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 20px;
-	margin-bottom: 8px;
+  color: #121417;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 8px;
 }
 
 .accessoryList {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	color: rgba(18, 20, 23, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: rgba(18, 20, 23, 0.5);
 
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 18px;
-	gap: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  gap: 3px;
 }
 
 .accessoryListItem {
-	color: rgba(18, 20, 23, 0.5);
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 18px;
-	border-right: 1px solid rgba(18, 20, 23, 0.2);
-	padding-right: 3px;
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  border-right: 1px solid rgba(18, 20, 23, 0.2);
+  padding-right: 3px;
 }
 
 .rentalBlock {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .rentalTitle {
-	margin-bottom: 8px;
-	color: #121417;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1.43;
+  margin-bottom: 8px;
+  color: #121417;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
 }
 
 .rentalInfo {
-	width: 320px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	margin-bottom: 24px;
-	@media (min-width: 768px) {
-		width: 100%;
-	}
-	@media (min-width: 1440px) {
-		width: 100%;
-	}
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .rentalItem {
-	padding: 7px 14px;
-	border-radius: 35px;
-	background: #f9f9f9;
-	color: #363535;
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 1.5;
+  padding: 7px 14px;
+  border-radius: 35px;
+  background: #f9f9f9;
+  color: #363535;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .rentalItemValue {
-	color: #3470ff;
-	font-family: Montserrat;
-	font-size: 12px;
-	font-weight: 600;
-	line-height: 1.5;
-	letter-spacing: -0.24px;
+  color: #3470ff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.24px;
 }
 .rentalButton {
-	width: 168px;
-	display: inline-flex;
-	padding: 12px 50px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 12px;
-	background: #3470ff;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 1.43;
-	text-decoration: none;
-	border: none;
-	cursor: pointer;
-	outline: none;
-	box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
-	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 168px;
+  display: inline-flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .rentalButton:hover {
-	background: #0b44cd;
+  background: #0b44cd;
 }
