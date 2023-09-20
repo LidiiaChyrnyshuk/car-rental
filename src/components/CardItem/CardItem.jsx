@@ -76,10 +76,10 @@ export const CardItem = ({
   });
 
   const incrementFavorite = () => {
-    if (!isLoggedIn) {
-      toast.error('Please register or login!');
-      return;
-    }
+    // if (!isLoggedIn) {
+    //   toast.error('Please register or login!');
+    //   return;
+    // }
     dispatch(addToFavoritePage(id));
   };
   const decrementFavorite = () => {
