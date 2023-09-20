@@ -1,24 +1,24 @@
 .Button {
-	padding: 8px 16px;
-	border-radius: 2px;
-	background-color: transparent;
-	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	text-align: center;
-	display: inline-block;
-	color: #3470ff;
-	border: 0;
-	text-decoration: underline;
-	cursor: pointer;
-	font-family: inherit;
-	font-size: 16px;
-	line-height: 24px;
-	font-style: normal;
-	font-weight: 500;
-	width: 180px;
-	margin: auto;
+  padding: 8px 16px;
+  border-radius: 2px;
+  background-color: #fff;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  display: inline-block;
+  color: #3470ff;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  width: 180px;
+  margin: auto;
 }
 
 .Button:hover,
 .Button:focus {
-	color: #0b44cd;
+  color: #0b44cd;
 }

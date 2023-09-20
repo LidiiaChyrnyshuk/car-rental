@@ -4,13 +4,12 @@ import {
   addToFavoritePage,
   deleteFromFavoritePage,
 } from '../../redux/cars/favoriteSlice';
-import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+
 // import PropTypes from 'prop-types';
 import { HiHeart } from 'react-icons/hi';
 import { HiOutlineHeart } from 'react-icons/hi';
 import { Modal } from '../Modal/Modal';
 import css from './CardItem.module.css';
-import { toast } from 'react-hot-toast';
 
 export const CardItem = ({
   model,
@@ -34,8 +33,6 @@ export const CardItem = ({
   const favorite = useSelector(state => state.favorite);
   const isFavorite = favorite.includes(id);
   const [showModal, setShowModal] = useState(false);
-
-  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const handleModalOpen = () => {
     setShowModal(true);
@@ -76,10 +73,6 @@ export const CardItem = ({
   });
 
   const incrementFavorite = () => {
-    // if (!isLoggedIn) {
-    //   toast.error('Please register or login!');
-    //   return;
-    // }
     dispatch(addToFavoritePage(id));
   };
   const decrementFavorite = () => {

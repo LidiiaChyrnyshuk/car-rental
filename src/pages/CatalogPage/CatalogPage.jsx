@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { ButtonLoadMore } from '../../components/ButtonLoadMore/ButtonLoadMore';
 import { CardsList } from '../../components/CardsList/CardsList';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
@@ -21,7 +21,7 @@ const CatalogPage = () => {
 
   const cardsPerPage = 8;
   const paginatedCars = cars.slice(0, page * cardsPerPage);
-  const totalPages = Math.ceil(cars.length / cardsPerPage);
+  const totalPages = cardsPerPage < Math.ceil(cars.length / cardsPerPage);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,15 +54,7 @@ const CatalogPage = () => {
         <>
           <CardsList cars={cars} />
 
-          {totalPages !== page && (
-            <button
-              className={css.loadMoreBtn}
-              type="button"
-              onClick={loadMore}
-            >
-              Load More
-            </button>
-          )}
+          {totalPages !== page && <ButtonLoadMore onClick={loadMore} />}
         </>
       )}
 
