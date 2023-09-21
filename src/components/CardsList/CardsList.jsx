@@ -10,7 +10,7 @@ export const CardsList = () => {
   const cars = useSelector(selectCars);
   const isLoading = useSelector(selectIsLoading);
   const [page, setPage] = useState(1);
-
+  console.log(cars);
   const cardsPerPage = 8;
   const paginatedCars = cars.slice(0, page * cardsPerPage);
   const totalPages = Math.ceil(cars.length / cardsPerPage);
@@ -24,26 +24,27 @@ export const CardsList = () => {
       ) : (
         <ul className={css.galleryList}>
           {paginatedCars.map(car => (
-            <CardItem
-              key={car.id}
-              model={car.model}
-              make={car.make}
-              year={car.year}
-              rentalPrice={car.rentalPrice}
-              isFavorite={car.isFavorite}
-              address={car.address}
-              rentalCompany={car.rentalCompany}
-              functionalities={car.functionalities}
-              id={car.id}
-              type={car.type}
-              img={car?.img}
-              fuelConsumption={car.fuelConsumption}
-              engineSize={car.engineSize}
-              description={car.description}
-              accessories={car.accessories}
-              rentalConditions={car.rentalConditions}
-              mileage={car.mileage}
-            />
+            <li key={car.id}>
+              <CardItem
+                model={car.model}
+                make={car.make}
+                year={car.year}
+                rentalPrice={car.rentalPrice}
+                isFavorite={car.isFavorite}
+                address={car.address}
+                rentalCompany={car.rentalCompany}
+                functionalities={car.functionalities}
+                id={car.id}
+                type={car.type}
+                img={car?.img}
+                fuelConsumption={car.fuelConsumption}
+                engineSize={car.engineSize}
+                description={car.description}
+                accessories={car.accessories}
+                rentalConditions={car.rentalConditions}
+                mileage={car.mileage}
+              />
+            </li>
           ))}
         </ul>
       )}

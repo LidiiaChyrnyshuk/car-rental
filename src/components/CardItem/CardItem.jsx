@@ -4,8 +4,8 @@ import {
   addToFavoritePage,
   deleteFromFavoritePage,
 } from '../../redux/favorite/favoriteSlice';
+import { selectFavorite } from '../../redux/favorite/favoriteSelectors';
 
-// import PropTypes from 'prop-types';
 import { HiHeart } from 'react-icons/hi';
 import { HiOutlineHeart } from 'react-icons/hi';
 import { Modal } from '../Modal/Modal';
@@ -30,8 +30,6 @@ export const CardItem = ({
   mileage,
 }) => {
   const dispatch = useDispatch();
-  const favorite = useSelector(state => state.favorite);
-  const isFavorite = favorite.includes(id);
   const [showModal, setShowModal] = useState(false);
 
   const handleModalOpen = () => {
@@ -78,18 +76,18 @@ export const CardItem = ({
   const decrementFavorite = () => {
     dispatch(deleteFromFavoritePage(id));
   };
+  const addressSlice = address.split(', ');
+  const city = addressSlice[1];
+  const country = addressSlice[2];
 
-  const addressParts = address.split(', ');
-  const city = addressParts[1];
-  const country = addressParts[2];
+  const miliageToString = mileage.toString();
+  const miliageAfterComma = miliageToString.slice(1, 4);
+  const miliageUi = miliageToString[0] + ',' + miliageAfterComma;
 
-  const firstFunctionality = functionalities[0]
-    .split(' ')
-    .slice(0, 1)
-    .join(' ');
-  const modelTitle = model.split(/[\s-]+/);
-  const makeTitle = make.split(/[\s-]+/);
+  const firstFunctionality = functionalities[0];
+  const favorites = useSelector(selectFavorite);
 
+  const followStatus = favorites.includes(id);
   return (
     <>
       <div className={css.item}>
@@ -97,10 +95,10 @@ export const CardItem = ({
           <img className={css.cardImg} src={img} alt={make} />
           <button
             className={css.iconBtn}
-            onClick={!isFavorite ? incrementFavorite : decrementFavorite}
+            onClick={!followStatus ? incrementFavorite : decrementFavorite}
             type="button"
           >
-            {isFavorite ? (
+            {followStatus ? (
               <HiHeart color={'#3470ff'} size={22} />
             ) : (
               <HiOutlineHeart size={22} />
@@ -112,7 +110,7 @@ export const CardItem = ({
             <ul className={css.carInfo}>
               <li className={css.carText}>{make}</li>
               <li className={css.carTextBlue}>
-                {modelTitle[0]}
+                {model}
                 <span style={{ color: 'black' }}>,</span>
               </li>
               <li className={css.carText}>{year}</li>
@@ -127,8 +125,8 @@ export const CardItem = ({
             </ul>
             <ul className={css.secondaryCarInfo}>
               <li className={css.secondaryCarAbout}>{type}</li>
-              <li className={css.secondaryCarAbout}>{makeTitle[0]}</li>
-              <li className={css.secondaryCarAbout}>{id}</li>
+              <li className={css.secondaryCarAbout}>{make}</li>
+              <li className={css.secondaryCarAbout}>{miliageUi}</li>
               <li className={css.secondaryCarAbout}>{firstFunctionality}</li>
             </ul>
           </div>
