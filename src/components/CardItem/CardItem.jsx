@@ -76,6 +76,7 @@ export const CardItem = ({
   const decrementFavorite = () => {
     dispatch(deleteFromFavoritePage(id));
   };
+
   const addressSlice = address.split(', ');
   const city = addressSlice[1];
   const country = addressSlice[2];
@@ -86,7 +87,7 @@ export const CardItem = ({
 
   const firstFunctionality = functionalities[0];
   const favorites = useSelector(selectFavorite);
-
+  console.log(favorites);
   const followStatus = favorites.includes(id);
   return (
     <>

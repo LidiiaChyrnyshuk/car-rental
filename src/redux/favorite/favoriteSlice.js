@@ -5,7 +5,7 @@ const favoritesInitialState = {
 };
 
 const favoritesSlice = createSlice({
-  name: 'favoritesCar',
+  name: 'favorites',
   initialState: favoritesInitialState,
 
   reducers: {

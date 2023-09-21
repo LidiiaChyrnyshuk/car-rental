@@ -10,7 +10,7 @@ export const CardsList = () => {
   const cars = useSelector(selectCars);
   const isLoading = useSelector(selectIsLoading);
   const [page, setPage] = useState(1);
-  console.log(cars);
+
   const cardsPerPage = 8;
   const paginatedCars = cars.slice(0, page * cardsPerPage);
   const totalPages = Math.ceil(cars.length / cardsPerPage);

@@ -15,7 +15,7 @@ import { carsReducer } from './cars/carsSlice';
 import { favoriteReducer } from './favorite/favoriteSlice';
 
 const persistConfig = {
-  key: 'favoritesCar',
+  key: 'favorites',
   storage,
   whitelist: ['cars'],
 };
