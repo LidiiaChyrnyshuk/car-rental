@@ -48,11 +48,7 @@ export const CardsList = () => {
           ))}
         </ul>
       )}
-      {isLoading ? (
-        totalPages !== page && <ButtonLoadMore getPage={getPage} />
-      ) : (
-        <Loader />
-      )}
+      {totalPages !== page && <ButtonLoadMore getPage={getPage} />}
     </section>
   );
 };

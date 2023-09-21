@@ -81,13 +81,16 @@ export const CardItem = ({
   const city = addressSlice[1];
   const country = addressSlice[2];
 
-  const miliageToString = mileage.toString();
-  const miliageAfterComma = miliageToString.slice(1, 4);
-  const miliageUi = miliageToString[0] + ',' + miliageAfterComma;
-
-  const firstFunctionality = functionalities[0];
+  // const miliageToString = mileage.toString();
+  // const miliageAfterComma = miliageToString.slice(1, 4);
+  // const miliageUi = miliageToString[0] + ',' + miliageAfterComma;
+  const firstFunctionality = functionalities[0]
+    .split(' ')
+    .slice(0, 1)
+    .join(' ');
+  // const firstFunctionality = functionalities[0];
   const favorites = useSelector(selectFavorite);
-  console.log(favorites);
+
   const followStatus = favorites.includes(id);
   return (
     <>
@@ -127,7 +130,7 @@ export const CardItem = ({
             <ul className={css.secondaryCarInfo}>
               <li className={css.secondaryCarAbout}>{type}</li>
               <li className={css.secondaryCarAbout}>{make}</li>
-              <li className={css.secondaryCarAbout}>{miliageUi}</li>
+              <li className={css.secondaryCarAbout}>{id}</li>
               <li className={css.secondaryCarAbout}>{firstFunctionality}</li>
             </ul>
           </div>
